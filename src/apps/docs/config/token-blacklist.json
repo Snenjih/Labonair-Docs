@@ -1,0 +1,10 @@
+{
+  "blacklistedTokens": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzYwNjQ0MTU3LCJleHAiOjE3NjA3MzA1NTd9.zrGYM554krWU1wR16PY49lMwpzyuh9fW1TAIhsWTvRs",
+      "blacklistedAt": "2025-10-16T19:51:48.005Z",
+      "expiresAt": "2025-10-17T19:49:17.000Z"
+    }
+  ],
+  "lastCleanup": "2025-10-16T19:51:48.005Z"
+}

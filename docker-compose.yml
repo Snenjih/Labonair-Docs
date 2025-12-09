@@ -1,0 +1,34 @@
+# PRODUCTION DOCKER COMPOSE CONFIGURATION
+# This file is optimized for production deployment with security best practices
+#
+# Usage:
+#   Production: docker-compose up -d
+#   Development: docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
+#
+# IMPORTANT: Set JWT_SECRET environment variable before running in production!
+#   export JWT_SECRET=your-secure-random-secret
+#   OR create a .env file with JWT_SECRET=your-secure-random-secret
+
+---
+services:
+  quantomdocs:
+    container_name: quantomdocs
+    image: ghcr.io/quantomdevs/quantomdocs:latest
+    ports:
+      - 5005:5005
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET=${JWT_SECRET:-quantom_secret_key_2025}
+      - PORT=5005
+      - HOST=0.0.0.0
+    volumes:
+      # PRODUCTION MOUNTS ONLY
+      # Mount content directory for live content editing
+      - ./content:/app/content
+      # Mount data directory for persistent data
+      - ./data:/app/data
+      # Optional: Mount logs for debugging (uncomment if needed)
+      # - ./logs:/app/logs
+    restart: unless-stopped
+    labels:
+      - com.centurylinklabs.watchtower.enable="true"

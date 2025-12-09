@@ -1,0 +1,32 @@
+{
+  "general": {
+    "default": true,
+    "defaultProduct": "quantom",
+    "showHeader": false,
+    "sidebarRightHeaders": {
+      "mainSectionHeader": true,
+      "subSectionHeader": true,
+      "subSubSectionHeader": false
+    },
+    "rightSidebarSectionGap": true
+  },
+  "header": {
+    "links": [
+      {
+        "name": "Download",
+        "url": "/downloads",
+        "special": true,
+        "external": false
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "quantom",
+      "name": "Quantom",
+      "description": "Quantom Documentation",
+      "showInDocs": true,
+      "icon": "fa-cube"
+    }
+  ]
+}
